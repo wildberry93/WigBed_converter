@@ -53,7 +53,7 @@ class BigWig_converter(object):
         Creates new header line.
         """
         splitted_header = self.header.split(" ")
-        name_desc = " ".join(splitted_header[2:]).rstrip()
+        name_desc = " ".join(splitted_header[2:])
         new_header = 'track type=wiggle_0 %s' % (name_desc)
         print new_header
         self.record_lines.append(new_header)

@@ -1,11 +1,181 @@
-track type=wiggle_0 name="fixedStep" description="variableStep format"
-fixedStep chrom=chr19 start=49302000 step=300 span=300
--1.0
--0.75
--0.50
--0.25
-0.0
-0.25
-0.50
-0.75
-1.00
+track type=wiggle_0 name="neurons H3K27ac" description="acetylation of 27th lysine in neurons of Drosophila melanogaster"
+fixedStep chrom=YHet start=32  step=31 span=31
+6
+15
+9
+5
+10
+5
+10
+5
+8
+3
+1
+fixedStep chrom=dmel_mitochondrion_genome start=621  step=4 span=4
+7
+11
+15
+24
+35
+44
+43
+39
+45
+56
+59
+fixedStep chrom=2L start=5078  step=5 span=5
+5
+11
+15
+10
+4
+5
+6
+9
+15
+10
+9
+fixedStep chrom=X start=6649  step=2 span=2
+1
+2
+3
+14
+13
+12
+11
+3
+6
+12
+21
+fixedStep chrom=3L start=19847  step=9 span=9
+7
+10
+22
+29
+30
+23
+20
+22
+28
+16
+9
+fixedStep chrom=4 start=26962  step=388 span=51
+13
+4
+13
+20
+16
+7
+6
+5
+2
+7
+12
+fixedStep chrom=2R start=3296  step=11 span=11
+3
+7
+12
+9
+5
+5
+5
+9
+4
+3
+1
+fixedStep chrom=3R start=6  step=1 span=1
+4
+7
+18
+24
+29
+31
+40
+36
+33
+22
+16
+fixedStep chrom=Uextra start=520  step=212 span=51
+6
+7
+2
+8
+8
+13
+5
+2
+11
+17
+15
+fixedStep chrom=2RHet start=1  step=7 span=7
+4
+5
+6
+7
+9
+12
+13
+14
+15
+11
+10
+fixedStep chrom=2LHet start=12621  step=21 span=21
+7
+12
+5
+11
+6
+13
+20
+24
+18
+11
+20
+fixedStep chrom=3LHet start=4513  step=66 span=51
+5
+8
+16
+22
+14
+6
+12
+6
+14
+21
+15
+fixedStep chrom=3RHet start=57  step=30 span=30
+11
+13
+2
+5
+15
+22
+17
+7
+14
+7
+4
+fixedStep chrom=U start=3673  step=6 span=6
+2
+8
+6
+4
+7
+13
+6
+8
+13
+5
+2
+fixedStep chrom=XHet start=615  step=6 span=6
+3
+9
+10
+7
+1
+10
+12
+20
+25
+33
+21
