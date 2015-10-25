@@ -62,6 +62,7 @@ class BigWig_converter(object):
         self.make_header()
         self.get_values()
 
+
 class BedGraph_converter(object):
     """
     BigWig to Bed converter

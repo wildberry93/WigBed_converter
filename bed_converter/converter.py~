@@ -38,8 +38,6 @@ class BigWig_converter(object):
         for idx, record in enumerate(self.infile[1:]):
             new_record = ()
             if record.split("\t")[0] != start_prev.split("\t")[0]:
-                print record
-                print self.infile[idx+1]
                 self.record_lines.append(self.get_info(record, self.infile[idx+2]))
                 self.record_lines.append(record.split("\t")[3].rstrip())
                 print self.get_info(record, self.infile[idx+2])
@@ -61,8 +59,6 @@ class BigWig_converter(object):
     def do(self):
         self.make_header()
         self.get_values()
-        #print self.record_lines
-
 
 class BedGraph_converter(object):
     """
