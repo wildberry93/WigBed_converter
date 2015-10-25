@@ -1,181 +1,329 @@
 track type=wiggle_0 name="neurons H3K27ac" description="acetylation of 27th lysine in neurons of Drosophila melanogaster"
 fixedStep chrom=YHet start=32  step=31 span=31
 6
+fixedStep chrom=YHet start=63  step=20 span=20
 15
+fixedStep chrom=YHet start=83  step=1851 span=31
 9
+fixedStep chrom=YHet start=1934  step=13 span=13
 5
+fixedStep chrom=YHet start=1947  step=38 span=38
 10
+fixedStep chrom=YHet start=1985  step=9 span=9
 5
+fixedStep chrom=YHet start=1994  step=4 span=4
 10
+fixedStep chrom=YHet start=1998  step=44 span=44
 5
+fixedStep chrom=YHet start=2042  step=3 span=3
 8
+fixedStep chrom=YHet start=2045  step=847 span=48
 3
+fixedStep chrom=YHet start=2892  step=-2271 span=51
 1
 fixedStep chrom=dmel_mitochondrion_genome start=621  step=4 span=4
 7
+fixedStep chrom=dmel_mitochondrion_genome start=625  step=13 span=13
 11
+fixedStep chrom=dmel_mitochondrion_genome start=638  step=1 span=1
 15
+fixedStep chrom=dmel_mitochondrion_genome start=639  step=15 span=15
 24
+fixedStep chrom=dmel_mitochondrion_genome start=654  step=10 span=10
 35
+fixedStep chrom=dmel_mitochondrion_genome start=664  step=8 span=8
 44
+fixedStep chrom=dmel_mitochondrion_genome start=672  step=4 span=4
 43
+fixedStep chrom=dmel_mitochondrion_genome start=676  step=3 span=3
 39
+fixedStep chrom=dmel_mitochondrion_genome start=679  step=1 span=1
 45
+fixedStep chrom=dmel_mitochondrion_genome start=680  step=1 span=1
 56
+fixedStep chrom=dmel_mitochondrion_genome start=681  step=4397 span=8
 59
 fixedStep chrom=2L start=5078  step=5 span=5
 5
+fixedStep chrom=2L start=5083  step=8 span=8
 11
+fixedStep chrom=2L start=5091  step=38 span=38
 15
+fixedStep chrom=2L start=5129  step=5 span=5
 10
+fixedStep chrom=2L start=5134  step=25 span=8
 4
+fixedStep chrom=2L start=5159  step=3 span=3
 5
+fixedStep chrom=2L start=5162  step=1 span=1
 6
+fixedStep chrom=2L start=5163  step=38 span=38
 9
+fixedStep chrom=2L start=5201  step=9 span=9
 15
+fixedStep chrom=2L start=5210  step=3 span=3
 10
+fixedStep chrom=2L start=5213  step=1436 span=1
 9
 fixedStep chrom=X start=6649  step=2 span=2
 1
+fixedStep chrom=X start=6651  step=12 span=12
 2
+fixedStep chrom=X start=6663  step=30 span=30
 3
+fixedStep chrom=X start=6693  step=7 span=7
 14
+fixedStep chrom=X start=6700  step=2 span=2
 13
+fixedStep chrom=X start=6702  step=12 span=12
 12
+fixedStep chrom=X start=6714  step=660 span=30
 11
+fixedStep chrom=X start=7374  step=1 span=1
 3
+fixedStep chrom=X start=7375  step=1 span=1
 6
+fixedStep chrom=X start=7376  step=2 span=2
 12
+fixedStep chrom=X start=7378  step=12469 span=1
 21
 fixedStep chrom=3L start=19847  step=9 span=9
 7
+fixedStep chrom=3L start=19856  step=31 span=31
 10
+fixedStep chrom=3L start=19887  step=8 span=8
 22
+fixedStep chrom=3L start=19895  step=1 span=1
 29
+fixedStep chrom=3L start=19896  step=2 span=2
 30
+fixedStep chrom=3L start=19898  step=9 span=9
 23
+fixedStep chrom=3L start=19907  step=5 span=5
 20
+fixedStep chrom=3L start=19912  step=16 span=16
 22
+fixedStep chrom=3L start=19928  step=10 span=10
 28
+fixedStep chrom=3L start=19938  step=8 span=8
 16
+fixedStep chrom=3L start=19946  step=7016 span=1
 9
 fixedStep chrom=4 start=26962  step=388 span=51
 13
+fixedStep chrom=4 start=27350  step=5 span=5
 4
+fixedStep chrom=4 start=27355  step=1 span=1
 13
+fixedStep chrom=4 start=27356  step=45 span=45
 20
+fixedStep chrom=4 start=27401  step=5 span=5
 16
+fixedStep chrom=4 start=27406  step=9064 span=1
 7
+fixedStep chrom=4 start=36470  step=203 span=51
 6
+fixedStep chrom=4 start=36673  step=2545 span=51
 5
+fixedStep chrom=4 start=39218  step=10 span=10
 2
+fixedStep chrom=4 start=39228  step=10 span=10
 7
+fixedStep chrom=4 start=39238  step=-35942 span=16
 12
 fixedStep chrom=2R start=3296  step=11 span=11
 3
+fixedStep chrom=2R start=3307  step=22 span=22
 7
+fixedStep chrom=2R start=3329  step=18 span=18
 12
+fixedStep chrom=2R start=3347  step=11 span=11
 9
+fixedStep chrom=2R start=3358  step=66 span=22
 5
+fixedStep chrom=2R start=3424  step=264 span=51
 5
+fixedStep chrom=2R start=3688  step=20 span=20
 5
+fixedStep chrom=2R start=3708  step=31 span=31
 9
+fixedStep chrom=2R start=3739  step=6373 span=20
 4
+fixedStep chrom=2R start=10112  step=97 span=51
 3
+fixedStep chrom=2R start=10209  step=-10203 span=51
 1
 fixedStep chrom=3R start=6  step=1 span=1
 4
+fixedStep chrom=3R start=7  step=18 span=18
 7
+fixedStep chrom=3R start=25  step=6 span=6
 18
+fixedStep chrom=3R start=31  step=8 span=8
 24
+fixedStep chrom=3R start=39  step=9 span=9
 29
+fixedStep chrom=3R start=48  step=1 span=1
 31
+fixedStep chrom=3R start=49  step=8 span=8
 40
+fixedStep chrom=3R start=57  step=1 span=1
 36
+fixedStep chrom=3R start=58  step=18 span=18
 33
+fixedStep chrom=3R start=76  step=6 span=6
 22
+fixedStep chrom=3R start=82  step=438 span=8
 16
 fixedStep chrom=Uextra start=520  step=212 span=51
 6
+fixedStep chrom=Uextra start=732  step=236 span=51
 7
+fixedStep chrom=Uextra start=968  step=125 span=51
 2
+fixedStep chrom=Uextra start=1093  step=249 span=51
 8
+fixedStep chrom=Uextra start=1342  step=49 span=49
 8
+fixedStep chrom=Uextra start=1391  step=2 span=2
 13
+fixedStep chrom=Uextra start=1393  step=116 span=49
 5
+fixedStep chrom=Uextra start=1509  step=6 span=6
 2
+fixedStep chrom=Uextra start=1515  step=29 span=29
 11
+fixedStep chrom=Uextra start=1544  step=16 span=16
 17
+fixedStep chrom=Uextra start=1560  step=-1559 span=6
 15
 fixedStep chrom=2RHet start=1  step=7 span=7
 4
+fixedStep chrom=2RHet start=8  step=2 span=2
 5
+fixedStep chrom=2RHet start=10  step=9 span=9
 6
+fixedStep chrom=2RHet start=19  step=2 span=2
 7
+fixedStep chrom=2RHet start=21  step=11 span=11
 9
+fixedStep chrom=2RHet start=32  step=1 span=1
 12
+fixedStep chrom=2RHet start=33  step=2 span=2
 13
+fixedStep chrom=2RHet start=35  step=2 span=2
 14
+fixedStep chrom=2RHet start=37  step=15 span=15
 15
+fixedStep chrom=2RHet start=52  step=7 span=7
 11
+fixedStep chrom=2RHet start=59  step=12562 span=2
 10
 fixedStep chrom=2LHet start=12621  step=21 span=21
 7
+fixedStep chrom=2LHet start=12642  step=30 span=30
 12
+fixedStep chrom=2LHet start=12672  step=18 span=18
 5
+fixedStep chrom=2LHet start=12690  step=3 span=3
 11
+fixedStep chrom=2LHet start=12693  step=7 span=7
 6
+fixedStep chrom=2LHet start=12700  step=37 span=37
 13
+fixedStep chrom=2LHet start=12737  step=1 span=1
 20
+fixedStep chrom=2LHet start=12738  step=3 span=3
 24
+fixedStep chrom=2LHet start=12741  step=10 span=10
 18
+fixedStep chrom=2LHet start=12751  step=9 span=9
 11
+fixedStep chrom=2LHet start=12760  step=-8247 span=24
 20
 fixedStep chrom=3LHet start=4513  step=66 span=51
 5
+fixedStep chrom=3LHet start=4579  step=8 span=8
 8
+fixedStep chrom=3LHet start=4587  step=35 span=35
 16
+fixedStep chrom=3LHet start=4622  step=8 span=8
 22
+fixedStep chrom=3LHet start=4630  step=8 span=8
 14
+fixedStep chrom=3LHet start=4638  step=32 span=32
 6
+fixedStep chrom=3LHet start=4670  step=3 span=3
 12
+fixedStep chrom=3LHet start=4673  step=7 span=7
 6
+fixedStep chrom=3LHet start=4680  step=37 span=37
 14
+fixedStep chrom=3LHet start=4717  step=4 span=4
 21
+fixedStep chrom=3LHet start=4721  step=-4664 span=10
 15
 fixedStep chrom=3RHet start=57  step=30 span=30
 11
+fixedStep chrom=3RHet start=87  step=21 span=21
 13
+fixedStep chrom=3RHet start=108  step=48 span=30
 2
+fixedStep chrom=3RHet start=156  step=23 span=23
 5
+fixedStep chrom=3RHet start=179  step=18 span=18
 15
+fixedStep chrom=3RHet start=197  step=10 span=10
 22
+fixedStep chrom=3RHet start=207  step=23 span=23
 17
+fixedStep chrom=3RHet start=230  step=3 span=3
 7
+fixedStep chrom=3RHet start=233  step=15 span=15
 14
+fixedStep chrom=3RHet start=248  step=67 span=36
 7
+fixedStep chrom=3RHet start=315  step=3358 span=51
 4
 fixedStep chrom=U start=3673  step=6 span=6
 2
+fixedStep chrom=U start=3679  step=45 span=45
 8
+fixedStep chrom=U start=3724  step=4516 span=6
 6
+fixedStep chrom=U start=8240  step=244 span=51
 4
+fixedStep chrom=U start=8484  step=20 span=20
 7
+fixedStep chrom=U start=8504  step=31 span=31
 13
+fixedStep chrom=U start=8535  step=51 span=20
 6
+fixedStep chrom=U start=8586  step=30 span=30
 8
+fixedStep chrom=U start=8616  step=21 span=21
 13
+fixedStep chrom=U start=8637  step=91 span=30
 5
+fixedStep chrom=U start=8728  step=-8113 span=51
 2
 fixedStep chrom=XHet start=615  step=6 span=6
 3
+fixedStep chrom=XHet start=621  step=4 span=4
 9
+fixedStep chrom=XHet start=625  step=41 span=41
 10
+fixedStep chrom=XHet start=666  step=6 span=6
 7
+fixedStep chrom=XHet start=672  step=14 span=4
 1
+fixedStep chrom=XHet start=686  step=53 span=51
 10
+fixedStep chrom=XHet start=739  step=12 span=12
 12
+fixedStep chrom=XHet start=751  step=8 span=8
 20
+fixedStep chrom=XHet start=759  step=8 span=8
 25
+fixedStep chrom=XHet start=767  step=23 span=23
 33
-21

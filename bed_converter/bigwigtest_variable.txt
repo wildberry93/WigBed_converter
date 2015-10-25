@@ -164,4 +164,3 @@ variableStep chrom=XHet span=10
 71 0.0
 81 0.0
 91 0.0
-

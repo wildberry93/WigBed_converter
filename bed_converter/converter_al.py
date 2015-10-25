@@ -8,6 +8,7 @@ class BigWig_converter(object):
     
     def __init__(self, infile):
         self.infile = open(infile, "r").readlines()
+        #self.infile.sort(key=lambda l: float(l.split("\t")[1]) if not l.startswith("track") else None)
         self.header = _get_header(infile)
         self.record_lines = []
 
@@ -34,20 +35,11 @@ class BigWig_converter(object):
         Gets values and adds them to record_lines.
         """
         fixed_wig = []
-        start_prev = self.infile[0]
-        for idx, record in enumerate(self.infile[1:]):
-            new_record = ()
-            if record.split("\t")[0] != start_prev.split("\t")[0]:
-                print record
-                print self.infile[idx+1]
+        
+        for idx,record in enumerate(self.infile[1:-1]):
                 self.record_lines.append(self.get_info(record, self.infile[idx+2]))
-                self.record_lines.append(record.split("\t")[3].rstrip())
-                print self.get_info(record, self.infile[idx+2])
-                start_prev = record
-            else:
-                self.record_lines.append(record.split("\t")[3].rstrip())  
-                pass              
-
+                self.record_lines.append(record.split("\t")[3].rstrip())           
+                
     def make_header(self):
         """
         Creates new header line.
@@ -57,12 +49,13 @@ class BigWig_converter(object):
         new_header = 'track type=wiggle_0 %s' % (name_desc)
         print new_header
         self.record_lines.append(new_header)
+       
+    def reduce_redundancy(self):
+        pass
 
     def do(self):
         self.make_header()
         self.get_values()
-        #print self.record_lines
-
 
 class BedGraph_converter(object):
     """
@@ -105,25 +98,31 @@ class BedGraph_converter(object):
         """
         Make bed records from variableStep type wig file.
         """
-        chrom, start_value, span, step = self.get_info()
         
-        for record in self.infile:
+        for idx,record in enumerate(self.infile):
             new_record = ""
-            if record.startswith("track") or record.startswith("variableStep"):
+            if record.startswith("track"):
                 pass
-            else:
-                new_start_value = int(record.split(" ")[0])
-                value = record.split(" ")[1]
-                end_value = new_start_value + int(span)
-                print end_value
-                new_record = "%s %s %s %s" % (chrom, new_start_value, end_value, value.rstrip())
-                self.record_lines.append(new_record)
+            if record.startswith("variableStep"):
+                chrom, start_value, span, step = self.get_info(record)
+                print chrom, start_value, span, step
+                
+                for chr_record in self.infile[idx+1:]:
+                        if chr_record.startswith("variableStep"):
+                                break
+                        else:
+                                new_start_value = int(chr_record.split(" ")[0])
+                                value = chr_record.split(" ")[1]
+                                end_value = new_start_value + int(span)
+                                new_record = "%s %s %s %s" % (chrom, new_start_value, end_value, value.rstrip())
+                                self.record_lines.append(new_record)
 
-    def get_info(self):
+    def get_info(self, header_line):
         """
-        Returns necessary info from 2nd header line.
+        Returns necessary info from header line.
         """
-        splitted_1 = self.infile[1].split(" ")
+        splitted_1 = header_line.split(" ")
+        print splitted_1
         
         step = None
         chrom = ""
@@ -146,7 +145,10 @@ class BedGraph_converter(object):
         """
         Makes header for new bed file.
         """
-        new_header = 'track type=bedGraph name="BedGraph Format" description="BedGraph format"'
+        splitted_header = self.header.split(" ")
+        name_desc = " ".join(splitted_header[2:]).rstrip()
+        new_header = 'track type=bedGraph %s' % (name_desc)
+        print new_header
         self.record_lines.append(new_header)
 
     def do(self):

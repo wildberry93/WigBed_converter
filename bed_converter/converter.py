@@ -61,8 +61,6 @@ class BigWig_converter(object):
     def do(self):
         self.make_header()
         self.get_values()
-        #print self.record_lines
-
 
 class BedGraph_converter(object):
     """
