@@ -8,7 +8,6 @@ class BigWig_converter(object):
     
     def __init__(self, infile):
         self.infile = open(infile, "r").readlines()
-        #self.infile.sort(key=lambda l: float(l.split("\t")[1]) if not l.startswith("track") else None)
         self.header = _get_header(infile)
         self.record_lines = []
 
@@ -27,7 +26,7 @@ class BigWig_converter(object):
         start_value = int(splitted_1[1]) + 1
         span = int(splitted_1[2]) - int(splitted_1[1])
         
-        rec_name = 'fixedStep chrom=%s span=%s' % (chrom, span)
+        rec_name = 'variableStep chrom=%s span=%s' % (chrom, span)
         return rec_name
     
     def get_values_for_fixed(self):
@@ -47,10 +46,10 @@ class BigWig_converter(object):
             start = int(record.split("\t")[1]) + 1
             if record.split("\t")[0] != start_prev.split("\t")[0]:
                 self.record_lines.append(self.get_info(record, self.infile[idx+2]))
-                self.record_lines.append(start+"\t"+record.split("\t")[3].rstrip())
+                self.record_lines.append(str(start)+"\t"+record.split("\t")[3].rstrip())
                 start_prev = record
             else:
-                self.record_lines.append(start+"\t"+record.split("\t")[3].rstrip())  
+                self.record_lines.append(str(start)+"\t"+record.split("\t")[3].rstrip())  
                 pass           
                 
     def make_header(self):
@@ -60,15 +59,13 @@ class BigWig_converter(object):
         splitted_header = self.header.split(" ")
         name_desc = " ".join(splitted_header[2:]).rstrip()
         new_header = 'track type=wiggle_0 %s' % (name_desc)
-        print new_header
         self.record_lines.append(new_header)
        
     def reduce_redundancy(self):
         """
         Remove redundant lines if step is equal.
         """
-        for line in self.record_lines:
-                pass
+        pass
 
 
     def do(self):
@@ -110,12 +107,10 @@ class BedGraph_converter(object):
                         if chr_record.startswith("fixedStep"):
                                 break
                         else:
-                                print new_start_value
                                 end_value = int(new_start_value) + int(span)
                                 new_record = "%s %s %s %s" % (chrom, new_start_value, end_value, chr_record.rstrip())
                                 self.record_lines.append(new_record)
                                 new_start_value += step
-                                print new_start_value
 
 
     def make_from_variable(self):
@@ -129,7 +124,6 @@ class BedGraph_converter(object):
                 pass
             if record.startswith("variableStep"):
                 chrom, start_value, span, step = self.get_info(record)
-                print chrom, start_value, span, step
                 
                 for chr_record in self.infile[idx+1:]:
                         if chr_record.startswith("variableStep"):
@@ -174,12 +168,10 @@ class BedGraph_converter(object):
         splitted_header = self.header.split(" ")
         name_desc = " ".join(splitted_header[2:]).rstrip()
         new_header = 'track type=bedGraph %s' % (name_desc)
-        print new_header
         self.record_lines.append(new_header)
 
     def do(self):
         self.isFixedWig()
-        print self.isFixed
         self.make_header()
 
         if self.isFixed:
