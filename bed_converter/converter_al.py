@@ -29,6 +29,7 @@ class BigWig_converter(object):
         rec_name = 'variableStep chrom=%s span=%s' % (chrom, span)
         return rec_name
     
+    
     def get_values_for_fixed(self):
         """
         Gets values and adds them to record_lines.
@@ -36,6 +37,7 @@ class BigWig_converter(object):
         for idx,record in enumerate(self.infile[1:-1]):
                 self.record_lines.append(self.get_info(record, self.infile[idx+2]))
                 self.record_lines.append(record.split("\t")[3].rstrip())           
+    
     
     def get_values_for_variable(self):
         """
@@ -52,6 +54,7 @@ class BigWig_converter(object):
                 self.record_lines.append(str(start)+"\t"+record.split("\t")[3].rstrip())  
                 pass           
                 
+    
     def make_header(self):
         """
         Creates new header line.
@@ -61,6 +64,7 @@ class BigWig_converter(object):
         new_header = 'track type=wiggle_0 %s' % (name_desc)
         self.record_lines.append(new_header)
        
+    
     def reduce_redundancy(self):
         """
         Remove redundant lines if step is equal.
@@ -83,13 +87,15 @@ class BedGraph_converter(object):
         self.record_lines = []
         self.isFixed = False
 
+    
     def isFixedWig(self):
         """
-        Checks wiggle format.
+        Checks format.
         """
         if self.infile[1].startswith("fixedStep"):
             self.isFixed = True
 
+    
     def make_from_fixed(self):
         """
         Makes bed records from fixedStep type wig file.
@@ -142,7 +148,6 @@ class BedGraph_converter(object):
         header_line - step header line
         """
         splitted_1 = header_line.split(" ")
-        print splitted_1
         
         step = None
         chrom = ""
@@ -189,10 +194,12 @@ def _check_format(infile):
     format = ""
 
     if "bedGraph" in infile:
-        format = "bed"
-    if "wiggle_0" in infile:
         format = "wig"
-
+        print "\nConverting bedGraph to wig..."
+    if "wiggle_0" in infile:
+        format = "bed"
+        print "\nConverting wig to bedGraph..."
+        
     return format
 
 def _get_header(infile):
@@ -213,11 +220,11 @@ if __name__ == '__main__':
 
     format = _check_format(input_file)
 
-    if format == "bed":
+    if format == "wig":
         bw = BigWig_converter(input_file)
         bw.do()
         out_list = bw.record_lines
-    elif format == "wig":
+    elif format == "bed":
         bg = BedGraph_converter(input_file)
         bg.do()
         out_list = bg.record_lines
@@ -227,4 +234,6 @@ if __name__ == '__main__':
             converted_file.write(line+"\n")
 
     converted_file.close()
+    
+    print "\nConverted file saved to: converted_file."+format+"\n"
         
