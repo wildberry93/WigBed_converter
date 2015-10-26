@@ -26,7 +26,7 @@ class BigWig_converter(object):
         start_value = int(splitted_1[1]) + 1
         span = int(splitted_1[2]) - int(splitted_1[1])
         
-        rec_name = 'variableStep chrom=%s span=%s' % (chrom, span)
+        rec_name = 'variableStep chrom=%s span=%s start=%s' % (chrom, span, start_value)
         return rec_name
     
     
@@ -74,8 +74,9 @@ class BigWig_converter(object):
 
     def do(self):
         self.make_header()
-        self.get_values_for_variable()
-
+        #self.get_values_for_variable()
+        self.get_values_for_fixed()
+        
 class BedGraph_converter(object):
     """
     BigWig to Bed converter

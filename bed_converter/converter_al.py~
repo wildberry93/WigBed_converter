@@ -74,8 +74,9 @@ class BigWig_converter(object):
 
     def do(self):
         self.make_header()
-        self.get_values_for_variable()
-
+        #self.get_values_for_variable()
+        self.get_values_for_fixed()
+        
 class BedGraph_converter(object):
     """
     BigWig to Bed converter
@@ -195,10 +196,10 @@ def _check_format(infile):
 
     if "bedGraph" in infile:
         format = "wig"
-        print "Converting bedGraph to wig..."
+        print "\nConverting bedGraph to wig..."
     if "wiggle_0" in infile:
         format = "bed"
-        print "Converting wig to bedGraph..."
+        print "\nConverting wig to bedGraph..."
         
     return format
 
